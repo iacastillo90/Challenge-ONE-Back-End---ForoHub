@@ -86,7 +86,7 @@ Realiza una eliminación lógica de un tópico cambiando su estado a inactivo.
 ### 1️⃣ **Clonar el repositorio**  
 Clona este repositorio en tu máquina local:  
 ```bash
-git clone https://github.com/tu-usuario/foro-hub.git
+git clone https://github.com/iacastillo90/Challenge-ONE-Back-End---ForoHub
 ```
 ---
 ### 2️⃣ **Actualiza el archivo application.properties con los datos de conexión a tu base de datos:**  
