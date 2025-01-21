@@ -6,6 +6,8 @@ import com.foroAlura.ForoHub.Domain.Usuario.Usuario;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDateTime;
+
 @Entity(name = "Respuesta")
 @Table(name = "Respuestas")
 @Getter
@@ -26,8 +28,12 @@ public class Respuesta {
     @JsonBackReference("Topico-Respuesta")
     private Topico topico;
 
+    private LocalDateTime fechaCreacion = LocalDateTime.now();
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "autor_id")
     @JsonBackReference("Usuario-Respuesta")
     private Usuario autor;
+
+    private String solucion;
 }

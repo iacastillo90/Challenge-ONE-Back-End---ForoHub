@@ -28,9 +28,9 @@ public class Topico {
 
     private String mensaje;
 
-    private LocalDateTime fechaCreacion;
+    private LocalDateTime fechaCreacion = LocalDateTime.now();
 
-    private Boolean status;
+    private Boolean status = true;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "autor_id")
