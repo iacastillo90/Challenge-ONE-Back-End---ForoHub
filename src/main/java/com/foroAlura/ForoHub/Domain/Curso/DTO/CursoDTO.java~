@@ -1,0 +1,15 @@
+package com.foroAlura.ForoHub.Domain.Curso.DTO;
+
+import com.foroAlura.ForoHub.Domain.Topico.DTO.TopicoDTO;
+import jakarta.validation.constraints.NotBlank;
+
+import java.util.List;
+
+public record CursoDTO(
+        @NotBlank(message = "El nombre del curso no puede estar vacío.")
+        String nombre,
+        @NotBlank(message = "La categoría del curso no puede estar vacía.")
+        String categoria,
+        List<TopicoDTO> topicos
+) {
+}

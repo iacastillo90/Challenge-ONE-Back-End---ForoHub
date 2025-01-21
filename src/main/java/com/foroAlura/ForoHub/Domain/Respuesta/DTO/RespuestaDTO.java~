@@ -1,0 +1,24 @@
+package com.foroAlura.ForoHub.Domain.Respuesta.DTO;
+
+import com.foroAlura.ForoHub.Domain.Topico.Topico;
+import com.foroAlura.ForoHub.Domain.Usuario.Usuario;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
+import java.time.LocalDateTime;
+
+public record RespuestaDTO(
+
+        @NotBlank(message = "El mensaje no puede estar vacío")
+        String mensaje,
+        @NotNull
+        Topico topico,
+        @NotBlank(message = "La solución no puede estar vacía")
+        LocalDateTime fechaCreacion,
+        @NotNull
+        Usuario autor,
+        @NotBlank(message = "La solución no puede estar vacía")
+        String solucion
+
+) {
+}

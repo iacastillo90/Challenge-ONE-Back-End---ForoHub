@@ -1,0 +1,6 @@
+package com.foroAlura.ForoHub.Domain.Curso.Service.ImplementService;
+
+import com.foroAlura.ForoHub.Domain.Curso.Service.CursoService;
+
+public class CursoServiceImplement implements CursoService {
+}

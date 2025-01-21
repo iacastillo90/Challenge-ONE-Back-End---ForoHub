@@ -1,0 +1,15 @@
+package com.foroAlura.ForoHub.Domain.Usuario.DTO;
+
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+
+public record RegistrarUsuarioDTO(
+        @NotBlank
+        String nombre,
+        @NotBlank
+        @Email
+        String correoElectronico,
+        @NotBlank
+        String contrasenia
+) {
+}
