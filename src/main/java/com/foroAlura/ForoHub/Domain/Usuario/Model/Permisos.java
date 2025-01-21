@@ -1,7 +1,6 @@
 package com.foroAlura.ForoHub.Domain.Usuario.Model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.foroAlura.ForoHub.Domain.Perfil.Model.Perfil;
 import jakarta.persistence.*;
 import lombok.*;
 

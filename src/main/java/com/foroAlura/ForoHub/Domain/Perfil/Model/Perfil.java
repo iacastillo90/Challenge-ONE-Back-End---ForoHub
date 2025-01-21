@@ -1,10 +1,7 @@
 package com.foroAlura.ForoHub.Domain.Perfil.Model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.foroAlura.ForoHub.Domain.Usuario.Model.Permisos;
 import com.foroAlura.ForoHub.Domain.Usuario.Model.Usuario;
 import jakarta.persistence.*;
-import jakarta.persistence.CascadeType;
 import lombok.*;
 
 import java.util.List;

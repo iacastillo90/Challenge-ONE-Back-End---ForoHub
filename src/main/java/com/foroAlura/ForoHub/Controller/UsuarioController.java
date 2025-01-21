@@ -6,7 +6,6 @@ import com.foroAlura.ForoHub.Domain.Usuario.Repository.UsuarioRepository;
 import com.foroAlura.ForoHub.Domain.Usuario.Service.UsuarioService;
 import com.foroAlura.ForoHub.Infra.AuthService;
 import com.foroAlura.ForoHub.Infra.Request.AuthResquest;
-import com.foroAlura.ForoHub.Infra.Request.LoginRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -36,5 +35,15 @@ public class UsuarioController {
     public ResponseEntity<AuthResquest> login(@RequestBody AutenticarUsuarioDTO request) {
 
         return ResponseEntity.ok(authService.login(request));
+    }
+
+    @PostMapping("/registro")
+    public ResponseEntity<Usuario> registro(@RequestBody Usuario usuario) {
+
+        if (usuarioRepository.existsByEmail(usuario.getEmail())) {
+            return ResponseEntity.badRequest().build();
+        }
+        usuario.setContrasena(passwordEncoder.encode(usuario.getContrasena()));
+        return ResponseEntity.ok(usuarioService.save(usuario));
     }
 }

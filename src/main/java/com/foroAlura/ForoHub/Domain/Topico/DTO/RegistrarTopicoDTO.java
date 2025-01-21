@@ -1,5 +1,6 @@
 package com.foroAlura.ForoHub.Domain.Topico.DTO;
 
+import com.foroAlura.ForoHub.Domain.Topico.Model.Topico;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
@@ -15,4 +16,7 @@ public record RegistrarTopicoDTO(
         Long curso
 
 ) {
+        public RegistrarTopicoDTO(Topico topico) {
+                this(topico.getTitulo(), topico.getMensaje(), topico.getAutor().getId(), topico.getCurso().getId());
+        }
 }

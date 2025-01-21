@@ -40,4 +40,5 @@ public record DetalleTopicoConRespuestaDTO(
                 new DetalleCursoDTO(topico.getCurso()),
                 respuestas);
     }
+
 }
